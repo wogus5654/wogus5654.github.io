@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> 감염병 </title>
+	<title> 14주차 홈페이지 만들기 </title>
 <style>
 *{
 	padding: 0;
@@ -10,10 +10,14 @@
 li {
 	list-style-type: none;
 }
+.clear {
+	clear: both;
+}
 header {
 	width: 1300px;
 	height: 100px;
 	margin-top: 10px;
+	border: dotted 1px #cccccc; 
 }
 #logo {
 	margin-top: 10px;
@@ -23,11 +27,23 @@ header {
 	float: right;
 	margin: 30px 20px 0 0;
 }
+nav {
+	width: 1300px;
+	height: 70px;
+	margin-top: 10px;
+	border: dotted 1px #cccccc; 
+}
+nav li {
+	display: inline-block;
+	float: left;
+	margin: 20px 30px;
+}
 section {
 	float: left;
 	margin-top: 10px;
 	padding-bottom: 20px;
-	padding-right: 0px; 
+	padding-right: 0px;
+	border: dotted 1px #cccccc; 
 }
 aside {
 	float: right;
@@ -37,21 +53,21 @@ aside {
 aside li {
 	margin-bottom: 30px;
 	text-align: right;
-	border: dotted 1px #cccccc;
 }
 footer {
 	width: 1300px;
 	height: 100px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	border: dotted 1px #cccccc; 
 }
 #address {
-	float: right;
+	float: left;
 	margin: 10px 0 0 10px;
 }
 #customer {
-	float: left;
-	margin: 0px 0 0 0px;
+	float: right;
+	margin: 0px 0 0 150px;
 }
 
 #sub1 li{
@@ -59,6 +75,28 @@ footer {
 	padding-right: 20px;
 	text-align: center;
 }
+#sub1 img:hover{
+	box-shadow: 5px 5px 10px gray;
+	transform: translate(5px, -5px);
+}
+
+
+#sub2 li{
+	display: inline-block;
+	width: 160px;
+	padding-right: 20px;
+	margin: 20 0 20 50px;
+	text-align: center;
+}
+#sub2 img {
+	width:80px;
+	height:80px;
+	border-radius: 50% 50%;
+}
+#sub2 img:hover{
+	transform: scale(1.1);
+}
+
 #sub3 li{
 	display: inline-block;
 	margin-right: 16px;
@@ -70,7 +108,11 @@ footer {
 	border :0px solid pink;	
 	display: block; /* 아래여백*/
 }
-
+#sub3 img:hover{
+	transform: scale(1.1);
+	border :0px solid pink;
+	transition: transform 1s;
+}
 #page {
 	width: 1300px;
 	margin: auto;
@@ -82,42 +124,75 @@ footer {
 	<div id='page'>
 <header>
 		<div id='logo'>
-			<img src="./img01/test01.PNG" width="220">
-			<img src="./img01/test02.PNG" width="700">
+			<img src="./img/main01.png" width="220">
+		</div>
+		<div id='top'>
+			로그인 | 회원가입 | <a href="./intro.html">마이페이지</a> | 고객센터
 		</div>
 	</header>
-	<section >
-		<ul id="sub1">
-			<li><img src="./img01/test03.PNG">
-			<li><img src="./img01/test04.PNG">
-			<li><img src="./img01/test05.PNG">
-			<li><img src="./img01/test06.PNG">
-			<li> <img src="./img01/test07.PNG">
-			<li> <img src="./img01/test08.PNG">
-			<li> <img src="./img01/test09.PNG"> 
-			<li> <img src="./img01/test10.PNG">
-			<li> <img src="./img01/test11.PNG">
+<div class='clear'></div> <!-- float 속성 해제 -->
+	<nav>
+		<ul>
+			<li> <a href="./test.html">감염병</a> </li>
+			<li> 건강정보 </li>
+			<li> 정책정보 </li>
+			<li> 연구개발 </li>
+			<li> 알림.자료 </li>
+			<li> 간행물.통계 </li>
+			<li> 민원.정보공개 </li>
+			<li> 기관소개 </li>
+			<li> 사업별홈페이지 </li>
 		</ul>
-	</section> 
-	<section > 
-			<li> <img src="./img01/test12.PNG">
+	</nav>
+<div class='clear'> </div> <!-- float 속성 해제 -->
+	<section>
+			<img src="./img/main02.PNG" width="1080">
 	</section>
-	<address>
-	<aside>
+<aside>
 		<ul>
 			<li> 사용자별맞춤메뉴 </li>
 			<li> 일반인 </li>
 			<li> 연구자 </li>
 			<li> 언론인 </li>
 		</ul>
-</aside> <li> <img src="./img01/test13.PNG" width="800" height="1000">
-	</address>
+</aside>
+	<section >
+		<ul id="sub1">
+			<li><img src="./img/main03.PNG"  width="250"> <br> 온열질환 건강수칙 
+			<li><img src="./img/main04.PNG"  width="250"> <br> 비브리오패혈증 예방수칙
+			<li><img src="./img/main05.PNG" width="250"> <br> 진드기 매개 감염병
+			<li><img src="./img/main06.PNG" width="250"> <br> 코로나19 영상자료
+		</ul>
+	</section> 
+	<section > 
+			<!-- <img src='./img/gooff.png' width=1000> -->
+			<ul id="sub2"> 
+			<li> <img src="./img/main07.PNG"> <br>해외감염정보
+			<li> <img src="./img/main08.PNG"> <br>홍보자료
+			<li> <img src="./img/main09.PNG"> <br>간행물 & 통계 
+			<li> <img src="./img/main10.PNG"> <br>조직도 & 직원찾기
+			<li> <img src="./img/main11.PNG"> <br>법령 & 지침 & 서식
+			<li> <img src="./img/main12.PNG"> <br>공고/공시
+			</ul>
+	</section>
+	<section > 
+			<!-- <img src='./img/gooff.png' width=1000> -->
+			<ul id="sub3"> 
+			<li> <img src="./img/main13.PNG"> </li> 
+			<li> <img src="./img/main14.PNG"> </li>
+			<li> <img src="./img/main15.PNG"> </li>
+			<li> <img src="./img/main16.PNG"> </li>
+			</ul>
+	</section>	
+	
 	<div class='clear'></div> <!-- float 속성 해제 -->
 	<footer>
+		<div id='address'>
+			<img src="./img/main17.PNG">
+		</div>
 		<div id='customer'>
-			<img src="./img01/test14.PNG" width="1300" height="150">
+			<img src="./img/main18.PNG" width="550">
 		</div>
 	</footer>
-<a href="./index.html">메인으로 가기 </a>
 </body>
 </html>
